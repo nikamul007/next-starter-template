@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { createRoot, Root } from "react-dom/client";
 
-function Rocket(): JSX.Element {
+function Rocket(): React.ReactElement {
   const [multiplier, setMultiplier] = useState(1.0);
   const [isLaunched, setIsLaunched] = useState(false);
   const intervalRef = useRef<number | null>(null);
