@@ -32,7 +32,7 @@ export default function Home() {
         }
         .sidebar-item:hover, .sidebar-item.active {
             background: linear-gradient(90deg, rgba(255, 179, 102, 0.2) 0%, transparent 100%);
-            border-left: 3px solid #FF9933;
+            border-inline-start: 3px solid #FF9933;
         }
         .page { display: none; }
         .page.active { display: block; }
