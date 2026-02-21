@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { createRoot, Root } from "react-dom/client";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -63,30 +64,8 @@ export default function Home() {
         </div>
       </div>
 
-      <!-- Rocket widget placeholder (if present in full UI) -->
-      <div id="rocket" class="page">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6">Rocket Launch 🚀</h2>
-        <div class="max-w-2xl mx-auto text-center">
-          <div class="bg-gradient-to-b from-indigo-900 to-indigo-700 rounded-2xl p-8 mb-6 min-h-64 relative overflow-hidden">
-            <div id="rocket-ship" class="rocket text-6xl">🚀</div>
-            <div id="multiplier" class="text-4xl font-bold text-white mt-4">1.00x</div>
-          </div>
-          <div class="bg-white rounded-xl p-6 shadow-sm">
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div>
-                <label class="block text-gray-700 text-sm font-medium mb-2">Bet Amount</label>
-                <input type="number" id="rocket-bet" class="w-full px-4 py-3 rounded-lg border border-gray-200" placeholder="10" value="10">
-              </div>
-              <div>
-                <label class="block text-gray-700 text-sm font-medium mb-2">Auto Cashout</label>
-                <input type="number" id="auto-cashout" class="w-full px-4 py-3 rounded-lg border border-gray-200" placeholder="2.00" step="0.1">
-              </div>
-            </div>
-            <button id="rocket-btn" class="w-full btn-orange text-white py-3 rounded-lg font-semibold">Launch!</button>
-            <p class="text-gray-500 text-sm mt-4">Cash out before the rocket crashes to win!</p>
-          </div>
-        </div>
-      </div>
+      <!-- Rocket widget placeholder (React will mount here) -->
+      <div id="rocket-root-placeholder"></div>
 
     </div>
   </main>
